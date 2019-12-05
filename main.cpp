@@ -9,7 +9,9 @@
 #include <bitset>
 
 int main(){
-	cv::VideoCapture cap("ObjectAbandonmentAndRemoval/ObjectAbandonmentAndRemoval1.avi");
+	
+    // Import image
+    cv::VideoCapture cap("ObjectAbandonmentAndRemoval/ObjectAbandonmentAndRemoval1.avi");
 	
 	int key = 0;
 	while(!(key == 'q' || key == 27)) {
@@ -82,11 +84,11 @@ int main(){
 			
 
 			cv::imshow("float_me Boundings", boundImg);
-			cv::imshow("flaot_me Contours",contourImg);
-			cv::imshow("float_me Morphed Mask",mask_morph);
-			cv::imshow("float_me MOG mask",MaskMOG2);
-			cv::imshow("float_me frame_masked",frame_masked);
-			cv::imshow("float_me frame",frame);
+			//cv::imshow("flaot_me Contours",contourImg);
+			cv::imshow("float_me MOG mask",mask_morph);
+            cv::imshow("float_me frame_masked",frame_masked);	
+			cv::imshow("float_me Morphed Mask",MaskMOG2);
+            cv::imshow("float_me frame",frame);
 
 
 			key = cv::waitKey(30);
